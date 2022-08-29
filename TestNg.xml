@@ -1,0 +1,31 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+  
+<suite name="API Testing" verbose="10" parallel="false" thread-count="4" >
+<test name="LMS API Testing" >
+    <classes>
+       <class name="lmsApi.getRequest"></class>
+	   <class name="lmsApi.postRequest"></class>
+	   <class name="lmsApi.putRequest"></class>
+	   <class name="lmsApi.deleteRequest"></class>
+    </classes>
+</test>
+<test name="Jobs API Testing" >
+    <classes>
+       <class name="jobsAPI.getRequest"></class>
+	   <class name="jobsAPI.postRequest">
+			<methods>
+        		<include name="postReq" />
+				<include name="postExistingId" />
+      		</methods>
+	   </class>
+	   <class name="jobsAPI.putRequest"></class>
+	   <class name="jobsAPI.deleteRequest">
+			<methods>
+        		<include name="delReq" />
+				<include name="delNonExistingId" />
+      		</methods>
+	   </class>
+    </classes>
+  </test>
+
+</suite>

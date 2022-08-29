@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="4" parallel="tests" name="Failed suite [API Testing]" guice-stage="DEVELOPMENT" verbose="10">
+  <test thread-count="4" parallel="tests" name="Jobs API Testing(failed)" verbose="10">
+    <classes>
+      <class name="jobsAPI.deleteRequest">
+        <methods>
+          <include name="delNonExistingId" invocation-numbers="0"/>
+          <include name="delReq"/>
+        </methods>
+      </class> <!-- jobsAPI.deleteRequest -->
+    </classes>
+  </test> <!-- Jobs API Testing(failed) -->
+</suite> <!-- Failed suite [API Testing] -->
